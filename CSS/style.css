@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-background: #181616;
+  --color-menu: #fff;
+  --color-hover: #000;
+  --hover-menu: rgb(91, 91, 184);
+  --shadow-menu: #aaa3a3;
+}
+
+/*  */
+/* --- Definição do HEADER --- */
+/*  */
+.header-menu {
+  min-width: 100vw;
+  min-height: 10vh;
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--nav-background);
+}
+
+.logo-menu,
+.goto-menu,
+.btn-menu {
+  padding: 2rem;
+  color: var(--color-menu);
+}
+
+.img-menu {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  width: 4vw;
+  height: 8vh;
+}
+
+.goto-menu > a {
+  color: var(--color-menu);
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 900px) {
+  .goto-menu > a {
+    font-size: 0.7em;
+  }
+}
+
+.goto-menu > a:hover {
+  color: var(--hover-menu);
+  transition: 0.8s;
+}
+
+.btn-menu > button {
+  color: var(--color-hover);
+  padding: 10px;
+  font-size: 1.3em;
+  border-radius: 50% 20%;
+  box-shadow: 1px 5px 20px var(--shadow-menu);
+}
+
+.btn-menu > button:hover {
+  background-color: var(--hover-menu);
+  color: var(--color-menu);
+  box-shadow: 1px 5px 20px var(--hover-menu);
+  transition: 0.6s;
+}
+
+.img-banner {
+  width: 100vw;
+  height: 60vh;
+  opacity: 40%;
+  text-decoration: wavy;
+  background-size: cover;
+  position: relative;
+}
+
+.text-banner {
+  position: absolute;
+  background-color: rgba(163, 164, 185, 0.877);
+  font-size: 3em;
+  font-weight: bolder;
+  line-height: 10vh;
+  padding: 10px;
+  border-radius: 40%;
+  color: #000;
+  text-align: center;
+  top: 30vh;
+  left: 35vw;
+}
