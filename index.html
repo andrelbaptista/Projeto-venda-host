@@ -1,48 +1,186 @@
 <!DOCTYPE html>
+<!-- linguagem -->
 <html lang="pt-br">
   <head>
+    <!-- assentos -->
     <meta charset="UTF-8" />
+    <!-- media query -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
     <link
       rel="shortcut icon"
       href="/Projeto-venda-host/img/acme-23060.svg"
       type="image/x-icon"
     />
+    <!-- Estilos -->
     <link rel="stylesheet" href="/Projeto-venda-host/CSS/style.css" />
-    <title>ACE Hosting</title>
+    <!-- Ícones font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ACME Hosting</title>
   </head>
   <body>
+    <!-- cabeçalho -->
+    <header class="menu">
+      <nav>
+        <!-- logo menu -->
+        <a href="#"
+          ><img class="logo" src="img/acme-new.png" alt="Logo da empresa ACME"
+        /></a>
+        <!-- opções menu -->
+        <ul class="menu-item">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#" class="btn">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <header id="home">
-        <nav class="header-menu">
-          <figure class="logo-menu">
-            <img
-              class="img-menu"
-              src="/Projeto-venda-host/img/acme-23060.svg"
-              alt="Logo da empresa ACME"
-            />
-          </figure>
-          <div class="goto-menu"><a href="#home">HOME</a></div>
-          <div class="goto-menu"><a href="#precos">PREÇOS</a></div>
-          <div class="goto-menu"><a href="#contato">CONTATO</a></div>
-          <div class="btn-menu">
-            <button type="submit" name="entrar" value="entrar">Entrar</button>
-          </div>
-        </nav>
-      </header>
-      <section>
-        <figure>
-          <img
-            class="img-banner"
-            src="img/novas-tecnologias-nuvem.jpg"
-            alt="banner de tecnologia"
-          />
-        </figure>
-        <p class="text-banner">
-          ACME Hospedagem de Sites WEB <br />
-          Os melhores preços com os melhores serviços
-        </p>
+      <!-- banner -->
+      <div class="banner">
+        <h1>ACME WEB Hosting</h1>
+        <p>Os melhores preços com os melhores serviços</p>
+      </div>
+      <!-- Deferenciais -->
+      <section class="diferenciais">
+        <ul>
+          <li>
+            <i class="fas fa-shield-alt"></i>
+            <h3>Segurança</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatem deserunt inventore aperiam eveniet dolorum natus
+              explicabo ipsum quaerat ipsa, sed facilis saepe molestias nemo,
+              temporibus excepturi, soluta nam laborum obcaecati.
+            </p>
+          </li>
+          <li>
+            <i class="fas fa-rocket"></i>
+            <h3>Performance</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatem deserunt inventore aperiam eveniet dolorum natus
+              explicabo ipsum quaerat ipsa, sed facilis saepe molestias nemo,
+              temporibus excepturi, soluta nam laborum obcaecati.
+            </p>
+          </li>
+          <li>
+            <i class="fas fa-comments"></i>
+            <h3>Suporte 24/7</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatem deserunt inventore aperiam eveniet dolorum natus
+              explicabo ipsum quaerat ipsa, sed facilis saepe molestias nemo,
+              temporibus excepturi, soluta nam laborum obcaecati.
+            </p>
+          </li>
+        </ul>
       </section>
+      <!-- planos e precos -->
+      <section class="planos-precos">
+        <h2>Planos e Preços</h2>
+        <p>Selecione o plano desejado</p>
+        <div class="planos">
+          <div class="tipos">
+            <ul>
+              <li class="tipo-preco">R$ 15/mês</li>
+              <li class="tipo-nome">Básico</li>
+              <li>2GB de espaço</li>
+              <li>25 contas de e-mail</li>
+              <li>1 domínio</li>
+              <li>Painel de controle</li>
+              <li>Suporte 24x7</li>
+              <li class="tipo-btn">Saiba mais</li>
+            </ul>
+          </div>
+          <div class="tipos">
+            <ul>
+              <li class="tipo-preco recomendado">R$ 30/mês</li>
+              <li class="tipo-nome">Dedicado</li>
+              <li>5GB de espaço</li>
+              <li>50 contas de e-mail</li>
+              <li>10 domínios</li>
+              <li>Painel de controle</li>
+              <li>Suporte 24x7</li>
+              <li class="tipo-btn recomendado">Saiba mais</li>
+            </ul>
+          </div>
+          <div class="tipos">
+            <ul>
+              <li class="tipo-preco">R$ 50/mês</li>
+              <li class="tipo-nome">Avançado</li>
+              <li>10GB de espaço</li>
+              <li>50 contas de e-mail</li>
+              <li>20 domínios</li>
+              <li>Painel de controle</li>
+              <li>Suporte 24x7</li>
+              <li class="tipo-btn">Saiba mais</li>
+            </ul>
+          </div>
+          <div class="tipos">
+            <ul>
+              <li class="tipo-preco">R$ 100/mês</li>
+              <li class="tipo-nome">Super</li>
+              <li>50GB de espaço</li>
+              <li>200 contas de e-mail</li>
+              <li>50 domínios</li>
+              <li>Painel de controle</li>
+              <li>Suporte 24x7</li>
+              <li class="tipo-btn">Saiba mais</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- pesquisa de domínios -->
+      <section class="dominio">
+        <h2>Pesquisa de domínios disponíveis</h2>
+        <p>Verifique o domínio que deseja</p>
+        <form>
+          <input
+            type="text"
+            name="dominio"
+            id="dominio"
+            placeholder="www.meudomínio.com.br"
+          />
+          <input type="submit" value="Pesquisar" />
+        </form>
+      </section>
+      <!-- entrar em contato -->
+      <section class="contato">
+        <h2>Enviei sua dúvida</h2>
+        <p>Nossos especialistas irão lhe responder</p>
+        <form>
+          <input type="text" name="nome" id="nome" placeholder="Seu nome" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Seu e-mail"
+          />
+          <input
+            type="tel"
+            name="telefone"
+            id="telefone"
+            placeholder="Seu Telefone"
+          />
+          <textarea
+            name="duvida"
+            id="duvida"
+            placeholder="Descreva a sua dúvida."
+          ></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
+      <!-- rodapé -->
+      <footer>
+        <a href="http://www.deeptech.com.br" target="_blank">Deeptech Serviços  @2024</a>
+      </footer>
     </main>
   </body>
 </html>

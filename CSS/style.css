@@ -1,100 +1,425 @@
+/* linguagem */
 @charset "UTF-8";
 
+/* estilos gerais - reset */
 * {
   padding: 0;
   margin: 0;
   border: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+p {
+  color: #70747a;
+}
+
+/* variáveis */
 :root {
-  --nav-background: #181616;
+  --nav-background: #232A31;
   --color-menu: #fff;
-  --color-hover: #000;
-  --hover-menu: rgb(91, 91, 184);
-  --shadow-menu: #aaa3a3;
+  --color-btn: #2cc76a;
+  --hover-menu: #ccc;
+  --hover-btn: #22bb5f;
+  --hover-text-btn: #fff;
+  --color-text-banner: #fff;
+  --text-shadow-banner: #000;
+  --icone-seguranca: #2cc76a;
+  --icone-perfornmance: #ef3f29;
+  --icone-suporte: #ef8f29;
+  --planos-tipos: #e8e9ea;
+  --planos-tipos-texto: #333;
+  --tipo-preco: #2cc762;
+  --tipo-preco-texto: #fff;
+  --tipo-nome: #202b34;
+  --tipo-nome-texto: #fff;
+  --tipo-btn: #2cc762;
+  --tipo-btn-texto: #fff;
+  --tipo-recomendado: #f45c57;
+  --dominio-faixa: #34454e;
+  --dominio-cabecalho: #fff;
+  --dominio-paragrafo: #d5d5d5;
+  --dominio-btn: #2cc76a;
+  --dominio-btn-texto: #fff;
+  --duvida-borda: #ccc;
+  --duvida-btn-fundo: #2cc76a;
+  --duvida-btn-color: #fff;
+  --footer-background: #000;
+  --footer-color: #fff;
 }
 
-/*  */
-/* --- Definição do HEADER --- */
-/*  */
-.header-menu {
-  min-width: 100vw;
-  min-height: 10vh;
-  position: relative;
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-end;
-  align-items: center;
+/* header */
+.menu {
+  width: 100%;
+  height: 80px;
   background-color: var(--nav-background);
+  padding: 0.2rem;
+  position: relative;
 }
 
-.logo-menu,
-.goto-menu,
-.btn-menu {
-  padding: 2rem;
-  color: var(--color-menu);
+/* imagem */
+.logo {
+  width: 80px;
+  margin-top: 18px;
+  margin-left: 15px;
 }
 
-.img-menu {
+/* itens menu */
+.menu-item {
   position: absolute;
-  top: 15px;
-  left: 30px;
-  width: 4vw;
-  height: 8vh;
+  right: 0;
+  height: 80px;
+  line-height: 80px;
+  margin: 0;
+  display: inline-block;
 }
 
-.goto-menu > a {
+.menu-item li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 25px;
+}
+
+.menu-item a {
   color: var(--color-menu);
-  font-size: 1.2em;
 }
 
-@media screen and (max-width: 900px) {
-  .goto-menu > a {
-    font-size: 0.7em;
+.menu-item a:hover {
+  transition: .5s;
+  color: var(--hover-menu);
+}
+
+/* botão entrar */
+.btn {
+  padding: 15px 20px;
+  background-color: var(--color-btn);
+  border-radius: 5px;
+  opacity: .8;
+}
+
+.menu-item .btn:hover {
+  background-color: var(--hover-btn);
+  color: var(--hover-text-btn);
+  opacity: 1;
+}
+
+/* banner */
+.banner {
+  background-image: url(../img/novas-tecnologias-nuvem.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0;
+}
+
+.banner h1,
+.banner p {
+  text-align: center;
+  font-weight: bold;
+  color:  var(--color-text-banner);
+  text-shadow: var(--text-shadow-banner) 3px 2px 2px ;
+}
+
+.banner h1 {
+  font-size: 54px;
+}
+
+.banner p {
+  font-size: 36px;
+}
+
+/* diferenciais */
+.diferenciais {
+  padding: 5rem 0;
+}
+
+.diferenciais ul {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.diferenciais li {
+  flex: 1 1 200px;
+  text-align: center;
+  list-style: none;
+  padding: 20px;
+}
+
+.fas {
+  margin-bottom: 15px;
+  font-size: 60px;
+}
+
+.fa-shield-alt {
+  color: var(--icone-seguranca);
+}
+
+.fa-rocket {
+  color: var(--icone-perfornmance);
+}
+
+.fa-comments {
+  color: var(--icone-suporte);
+}
+
+.diferenciais h3 {
+  margin-bottom: 25px;
+}
+
+.diferenciais p {
+  line-height: 24px;
+}
+
+/* planos e preços */
+.planos-precos {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.planos-precos h2 {
+  font-size: 36px;
+}
+
+.planos-precos p {
+  font-size: 20px;
+}
+
+.planos {
+  display: flex;
+  justify-content: space-between;
+  /* tecnica de centralização horizontal */
+  width: 90%;
+  margin: 50px auto;
+}
+
+.tipos {
+  width: 275px;
+  padding: 0 20px;
+}
+
+.tipos ul {
+  padding: 0;
+}
+
+.tipos li {
+  list-style: none;
+  /* tecnica de centralização vertical */
+  height: 50px;
+  line-height: 50px;
+  background-color: var(--planos-tipos);
+  color: var(--planos-tipos-texto) ;
+}
+
+.tipos .tipo-preco {
+  width:  120px;
+  height:  120px;
+  border-radius: 50%;
+  background-color: var(--tipo-preco);
+  color: var(--tipo-preco-texto);
+  line-height: 120px;
+  text-align: center;
+  margin: 0 auto -50px;
+  font-size: 18px;
+  position: relative;
+}
+
+.tipos .tipo-nome {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--tipo-nome);
+  color: var(--tipo-nome-texto);
+  padding: 50px 0;
+}
+
+.tipos .tipo-btn {
+  background-color: var(--tipo-btn);
+  color: var(--tipo-btn-texto);
+  height: 75px;
+  line-height: 75px;
+  cursor: pointer;
+}
+
+.tipos .recomendado {
+  background-color: var(--tipo-recomendado);
+}
+
+/* pesquisa de domínios */
+.dominio {
+  background-color: var(--dominio-faixa);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.dominio h2 {
+  color: var(--dominio-cabecalho);
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.dominio p {
+  color: var(--dominio-paragrafo);
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.dominio input {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.dominio input[type="text"] {
+  width: 60%;
+  padding: 20px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.dominio input[type="submit"] {
+  background-color: var(--dominio-btn);
+  /* muito usado em botões a largura o dobro da altura */
+  padding: 15px 30px;
+  color:  var(--dominio-btn-texto);
+  font-size: 24px;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.dominio input[type="submit"]:hover {
+  opacity: 1;
+}
+
+/* entrar em contato */
+.contato {
+  text-align: center;
+  padding: 5rem 0 2rem 0;
+  
+}
+
+.contato h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contato p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.contato input,
+.contato textarea {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--duvida-borda);
+  margin: 0 10px 20px;
+  width: 200px;
+}
+
+.contato textarea {
+  display: block;
+  width: 600px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+
+.contato input[type="submit"] {
+  background-color: var(--duvida-btn-fundo);
+  color: var(--duvida-btn-color);
+  display: block;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 50px;
+  opacity: .8;
+}
+
+.contato input[type="submit"]:hover {
+  opacity: 1;
+}
+
+/* rodapé */
+footer {
+  background-color: var(--footer-background);
+  padding: 15px;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  color: var(--footer-color);
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* reposividade */
+
+/* laptop 1100px */
+@media screen and (max-width: 1100px) {
+  .planos {
+    width: 95%;
+  }
+  .tipos {
+    padding: 0 5px;
   }
 }
 
-.goto-menu > a:hover {
-  color: var(--hover-menu);
-  transition: 0.8s;
+/* tablet 900px */
+@media (max-width: 900px) {
+  .banner p {
+    padding: 5px 6rem;}
+  .dominio {
+      padding: 3rem 4rem ;
+    }
 }
 
-.btn-menu > button {
-  color: var(--color-hover);
-  padding: 10px;
-  font-size: 1.3em;
-  border-radius: 50% 20%;
-  box-shadow: 1px 5px 20px var(--shadow-menu);
-}
-
-.btn-menu > button:hover {
-  background-color: var(--hover-menu);
-  color: var(--color-menu);
-  box-shadow: 1px 5px 20px var(--hover-menu);
-  transition: 0.6s;
-}
-
-.img-banner {
-  width: 100vw;
-  height: 60vh;
-  opacity: 40%;
-  text-decoration: wavy;
-  background-size: cover;
-  position: relative;
-}
-
-.text-banner {
-  position: absolute;
-  background-color: rgba(163, 164, 185, 0.877);
-  font-size: 3em;
-  font-weight: bolder;
-  line-height: 10vh;
-  padding: 10px;
-  border-radius: 40%;
-  color: #000;
-  text-align: center;
-  top: 30vh;
-  left: 35vw;
+/* celular 576px */
+@media  (max-width: 576px) {
+  .menu-item li {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+  .banner h1 {
+    font-size: 46px;
+  }
+  .banner p {
+    font-size: 23px;
+  }
+  .diferenciais ul {
+    flex-direction: column;
+  }
+  .planos {
+    flex-direction: column;
+  }
+  .tipos{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 2rem;
+  }
+  .dominio h2 {
+    font-size: 32px;
+  }
+  .dominio p {
+    font-size: 22px;
+  }
+  .dominio input[type="text"] {
+    width: 100%;
+   }
+  .contato {
+    padding: 2rem 3rem;
+  }
+  .contato textarea {
+    width: 100%;
+  
+  }
 }
