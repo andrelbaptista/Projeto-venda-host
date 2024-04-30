@@ -26,29 +26,29 @@
   </head>
   <body>
     <!-- cabeçalho -->
-    <header class="menu">
+    <header class="menu-container">
       <nav>
         <!-- logo menu -->
         <a href="#"
           ><img class="logo" src="img/acme-new.png" alt="Logo da empresa ACME"
         /></a>
         <!-- opções menu -->
-        <ul class="menu-item">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Planos</a></li>
-          <li><a href="#">Contato</a></li>
+        <ul id="home" class="menu-item">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contatos">Contato</a></li>
           <li><a href="#" class="btn">Entrar</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <!-- banner -->
-      <div class="banner">
+      <div class="banner-container">
         <h1>ACME WEB Hosting</h1>
         <p>Os melhores preços com os melhores serviços</p>
       </div>
       <!-- Deferenciais -->
-      <section class="diferenciais">
+      <section class="diferenciais-container">
         <ul>
           <li>
             <i class="fas fa-shield-alt"></i>
@@ -83,7 +83,7 @@
         </ul>
       </section>
       <!-- planos e precos -->
-      <section class="planos-precos">
+      <section id="planos" class="planos-precos-container">
         <h2>Planos e Preços</h2>
         <p>Selecione o plano desejado</p>
         <div class="planos">
@@ -138,7 +138,7 @@
         </div>
       </section>
       <!-- pesquisa de domínios -->
-      <section class="dominio">
+      <section class="dominio-container">
         <h2>Pesquisa de domínios disponíveis</h2>
         <p>Verifique o domínio que deseja</p>
         <form>
@@ -152,7 +152,7 @@
         </form>
       </section>
       <!-- entrar em contato -->
-      <section class="contato">
+      <section id="contatos" class="contato-container">
         <h2>Enviei sua dúvida</h2>
         <p>Nossos especialistas irão lhe responder</p>
         <form>
@@ -179,7 +179,9 @@
       </section>
       <!-- rodapé -->
       <footer>
-        <a href="http://www.deeptech.com.br" target="_blank">Deeptech Serviços  @2024</a>
+        <a href="http://www.deeptech.com.br" target="_blank"
+          >Deeptech Serviços @2024</a
+        >
       </footer>
     </main>
   </body>

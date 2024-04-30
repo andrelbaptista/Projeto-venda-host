@@ -1,4 +1,4 @@
-/* linguagem */
+/* linguagem com acentuação*/
 @charset "UTF-8";
 
 /* estilos gerais - reset */
@@ -56,7 +56,7 @@ p {
 }
 
 /* header */
-.menu {
+.menu-container {
   width: 100%;
   height: 80px;
   background-color: var(--nav-background);
@@ -111,41 +111,41 @@ p {
 }
 
 /* banner */
-.banner {
+.banner-container {
   background-image: url(../img/google-imagens.jpg);
   background-size: cover;
   background-position: center;
   padding: 10rem 0;
 }
 
-.banner h1,
-.banner p {
+.banner-container h1,
+.banner-container p {
   text-align: center;
   font-weight: bold;
   color:  var(--color-text-banner);
   text-shadow: var(--text-shadow-banner) 3px 2px 2px ;
 }
 
-.banner h1 {
+.banner-container h1 {
   font-size: 54px;
 }
 
-.banner p {
+.banner-container p {
   font-size: 36px;
 }
 
 /* diferenciais */
-.diferenciais {
+.diferenciais-container {
   padding: 5rem 0;
 }
 
-.diferenciais ul {
+.diferenciais-container ul {
   display: flex;
   width: 90%;
   margin: 0 auto;
 }
 
-.diferenciais li {
+.diferenciais-container li {
   flex: 1 1 200px;
   text-align: center;
   list-style: none;
@@ -169,25 +169,25 @@ p {
   color: var(--icone-suporte);
 }
 
-.diferenciais h3 {
+.diferenciais-container h3 {
   margin-bottom: 25px;
 }
 
-.diferenciais p {
+.diferenciais-container p {
   line-height: 24px;
 }
 
 /* planos e preços */
-.planos-precos {
+.planos-precos-container {
   text-align: center;
   padding-bottom: 5rem;
 }
 
-.planos-precos h2 {
+.planos-precos-container h2 {
   font-size: 36px;
 }
 
-.planos-precos p {
+.planos-precos-container p {
   font-size: 20px;
 }
 
@@ -252,39 +252,39 @@ p {
 }
 
 /* pesquisa de domínios */
-.dominio {
+.dominio-container {
   background-color: var(--dominio-faixa);
   text-align: center;
   padding: 5rem 0;
 }
 
-.dominio h2 {
+.dominio-container h2 {
   color: var(--dominio-cabecalho);
   font-size: 42px;
   margin-bottom: 15px;
 }
 
-.dominio p {
+.dominio-container p {
   color: var(--dominio-paragrafo);
   font-size: 24px;
   margin-bottom: 25px;
 }
 
-.dominio input {
+.dominio-container input {
   display: block;
   border: none;
   border-radius: 5px;
   margin: 0 auto;
 }
 
-.dominio input[type="text"] {
+.dominio-container input[type="text"] {
   width: 60%;
   padding: 20px;
   font-size: 20px;
   margin-bottom: 25px;
 }
 
-.dominio input[type="submit"] {
+.dominio-container input[type="submit"] {
   background-color: var(--dominio-btn);
   /* muito usado em botões a largura o dobro da altura */
   padding: 15px 30px;
@@ -294,29 +294,29 @@ p {
   opacity: .8;
 }
 
-.dominio input[type="submit"]:hover {
+.dominio-container input[type="submit"]:hover {
   opacity: 1;
 }
 
 /* entrar em contato */
-.contato {
+.contato-container {
   text-align: center;
   padding: 5rem 0 2rem 0;
   
 }
 
-.contato h2 {
+.contato-container h2 {
   font-size: 36px;
   margin-bottom: 15px;
 }
 
-.contato p {
+.contato-container p {
   font-size: 24px;
   margin-bottom: 40px;
 }
 
-.contato input,
-.contato textarea {
+.contato-container input,
+.contato-container textarea {
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
@@ -325,14 +325,14 @@ p {
   width: 200px;
 }
 
-.contato textarea {
+.contato-container textarea {
   display: block;
   width: 600px;
   height: 200px;
   margin: 0 auto 20px;
 }
 
-.contato input[type="submit"] {
+.contato-container input[type="submit"] {
   background-color: var(--duvida-btn-fundo);
   color: var(--duvida-btn-color);
   display: block;
@@ -343,7 +343,7 @@ p {
   opacity: .8;
 }
 
-.contato input[type="submit"]:hover {
+.contato-container input[type="submit"]:hover {
   opacity: 1;
 }
 
@@ -376,9 +376,9 @@ footer a {
 
 /* tablet 900px */
 @media (max-width: 900px) {
-  .banner p {
+  .banner-container p {
     padding: 5px 6rem;}
-  .dominio {
+  .dominio-container {
       padding: 3rem 4rem ;
     }
 }
@@ -389,13 +389,13 @@ footer a {
     font-size: 12px;
     margin: 0 5px;
   }
-  .banner h1 {
+  .banner-container h1 {
     font-size: 46px;
   }
-  .banner p {
+  .banner-container p {
     font-size: 23px;
   }
-  .diferenciais ul {
+  .diferenciais-container ul {
     flex-direction: column;
   }
   .planos {
@@ -406,19 +406,19 @@ footer a {
     max-width: 100%;
     padding: 2rem 2rem;
   }
-  .dominio h2 {
+  .dominio-container h2 {
     font-size: 32px;
   }
-  .dominio p {
+  .dominio-container p {
     font-size: 22px;
   }
-  .dominio input[type="text"] {
+  .dominio-container input[type="text"] {
     width: 100%;
    }
-  .contato {
+  .contato-container {
     padding: 2rem 3rem;
   }
-  .contato textarea {
+  .contato-container textarea {
     width: 100%;
   
   }
